@@ -3,67 +3,68 @@
 <node TEXT="git版本控制" FOLDED="false" ID="ID_35775821" CREATED="1608116057395" MODIFIED="1608116064668" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
+    <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ICON_SIZE="12.0 pt" COLOR="#000000" STYLE="fork">
-<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
+<stylenode LOCALIZED_TEXT="default" ICON_SIZE="12.0 pt" COLOR="#000000" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt" NUMBERED="true" BORDER_WIDTH="2.0 px">
+<font NAME="微软雅黑" SIZE="12" BOLD="false" ITALIC="false"/>
+<edge STYLE="horizontal"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
-<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<stylenode LOCALIZED_TEXT="defaultstyle.details" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt">
 <font SIZE="9"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.note" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.note" COLOR="#000000" BACKGROUND_COLOR="#ffffff" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt" TEXT_ALIGN="LEFT"/>
 <stylenode LOCALIZED_TEXT="defaultstyle.floating">
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.important">
+<stylenode LOCALIZED_TEXT="styles.important" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt">
 <icon BUILTIN="yes"/>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10.0 pt" SHAPE_VERTICAL_MARGIN="10.0 pt">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt">
 <font SIZE="18"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt">
 <font SIZE="16"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt">
 <font SIZE="14"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt">
 <font SIZE="12"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt">
 <font SIZE="10"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,5"/>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,6"/>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,7"/>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,8"/>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,9"/>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,10"/>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,11"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,5" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,6" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,7" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,8" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,9" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,10" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,11" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5.0 pt" SHAPE_VERTICAL_MARGIN="3.0 pt"/>
 </stylenode>
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="2" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="19" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="安装git" POSITION="right" ID="ID_952120087" CREATED="1608116084335" MODIFIED="1608116103922">
 <edge COLOR="#ff0000"/>
 </node>
@@ -73,21 +74,59 @@
 <node TEXT="mkdir -p /var/lib/git  //创建仓库存储点" ID="ID_1826034833" CREATED="1608116138877" MODIFIED="1608116176988"/>
 <node TEXT="git init /var/lib/git/project --bare //创建project仓库,bare定义此仓库为空仓库,如果没有这个选项将造成仓库不可写入" ID="ID_400032546" CREATED="1608116181473" MODIFIED="1608116266428"/>
 </node>
+<node TEXT="远程仓库管理" ID="ID_1938513354" CREATED="1608124920761" MODIFIED="1608124929045">
+<node TEXT="针对ssh链接创建SSH密钥对" ID="ID_30767530" CREATED="1608124821284" MODIFIED="1608124972402">
+<node TEXT="ssh-keygen -t rsa -C &quot;youremail@example.com&quot;" ID="ID_1638922371" CREATED="1608124859667" MODIFIED="1608124892267"/>
+</node>
+<node TEXT="在远程仓库中添加公钥" ID="ID_538386070" CREATED="1608124982211" MODIFIED="1608125011499"/>
+<node TEXT="本地仓库关联远程仓库" ID="ID_1005043251" CREATED="1608122769520" MODIFIED="1608125659052">
+<node TEXT="git remote add origin 远程仓库地址  //需进入仓库目录,origin为github默认远程仓库名,也可改成其它名称" ID="ID_417585074" CREATED="1608125035343" MODIFIED="1608125861659"/>
+<node TEXT="git push -u origin master  //将本地master分支推送到远程仓库,办关联远程仓库的master分支" ID="ID_912757659" CREATED="1608126156532" MODIFIED="1608126224973"/>
+</node>
 <node TEXT="克隆远程仓库" ID="ID_1166944803" CREATED="1608116283383" MODIFIED="1608116292156">
 <node TEXT="git clone 192.168.4.12:/var/lib/git/project  //需输入密码" ID="ID_790613829" CREATED="1608116292168" MODIFIED="1608116489222"/>
 </node>
-<node TEXT="添加修改到暂存区" ID="ID_1054206144" CREATED="1608116325237" MODIFIED="1608116345734">
-<node TEXT="git add .  //需进入仓库目录内" ID="ID_1070457879" CREATED="1608116345756" MODIFIED="1608116363300"/>
-</node>
-<node TEXT="提交修改到本地仓库" ID="ID_541990784" CREATED="1608116365383" MODIFIED="1608116377413">
-<node TEXT="git commit -m &quot;修改说明&quot;" ID="ID_134281404" CREATED="1608116377429" MODIFIED="1608116410237"/>
-</node>
 <node TEXT="推送修改到远程仓库" ID="ID_1524266741" CREATED="1608116411302" MODIFIED="1608116444621">
 <node TEXT="git push  //推送需要配置用户名等信息" ID="ID_500778665" CREATED="1608116419244" MODIFIED="1608116501781"/>
-<node TEXT="git config --global user.email &quot;you@example.com&quot;" ID="ID_1629720538" CREATED="1608116502355" MODIFIED="1608116536525"/>
-<node TEXT="git config --global user.name &quot;your name&quot;" ID="ID_296766209" CREATED="1608116537929" MODIFIED="1608116567036"/>
 <node TEXT="git config --global push.default simple  //配置使用习惯simple为新版方式" ID="ID_988582291" CREATED="1608116722211" MODIFIED="1608116764937"/>
 <node TEXT="配置文件保存于$HOME/.gitconfig" ID="ID_1060203672" CREATED="1608116581849" MODIFIED="1608116616383"/>
+</node>
+<node TEXT="上传时忽略指定文件" ID="ID_1051256633" CREATED="1608126410434" MODIFIED="1608126435569">
+<node TEXT="创建.gitignore文件" ID="ID_1702160983" CREATED="1608126435584" MODIFIED="1608126455368"/>
+<node TEXT="开放模式eg:" ID="ID_1833017373" CREATED="1608126665518" MODIFIED="1608126679352">
+<node TEXT="过滤目录" ID="ID_1702115625" CREATED="1608126456856" MODIFIED="1608126507721">
+<node TEXT="/目录名/" ID="ID_136607951" CREATED="1608126487403" MODIFIED="1608126501577"/>
+</node>
+<node TEXT="过滤文件类型" ID="ID_248161065" CREATED="1608126515381" MODIFIED="1608126526991">
+<node TEXT="*.zip" ID="ID_1559622186" CREATED="1608126527003" MODIFIED="1608126536559"/>
+<node TEXT="*.jpg" ID="ID_1677668403" CREATED="1608126537075" MODIFIED="1608126548384"/>
+</node>
+<node TEXT="过滤指定文件" ID="ID_878403806" CREATED="1608126561836" MODIFIED="1608126570874">
+<node TEXT="/路径/文件名" ID="ID_1074115886" CREATED="1608126570896" MODIFIED="1608126598784"/>
+</node>
+</node>
+<node TEXT="保守模式,不过滤哪些文件" ID="ID_1435650536" CREATED="1608126608908" MODIFIED="1608126636897">
+<node TEXT="!/目录名/  //跟踪这个目录" ID="ID_449177595" CREATED="1608126636928" MODIFIED="1608126737685"/>
+<node TEXT="!*.c  //跟踪某类型文件" ID="ID_313280213" CREATED="1608126747650" MODIFIED="1608126773032"/>
+<node TEXT="!/路径/文件名  //跟踪指定文件" ID="ID_1755884160" CREATED="1608126774068" MODIFIED="1608126797522"/>
+</node>
+</node>
+</node>
+<node TEXT="添加文件到暂存区" ID="ID_1054206144" CREATED="1608116325237" MODIFIED="1608122876188">
+<node TEXT="git add .  //添加当前工作区内所有被修改的文件到暂存区,需进入仓库目录内" ID="ID_1070457879" CREATED="1608116345756" MODIFIED="1608124267637"/>
+<node TEXT="git add 文件名  //创建文件并加到暂存区" ID="ID_460665547" CREATED="1608122913963" MODIFIED="1608122951356"/>
+</node>
+<node TEXT="提交修改到本地仓库" ID="ID_541990784" CREATED="1608116365383" MODIFIED="1608116377413">
+<node TEXT="git config --global user.email &quot;you@example.com&quot;" ID="ID_1629720538" CREATED="1608116502355" MODIFIED="1608116536525"/>
+<node TEXT="git config --global user.name &quot;your name&quot;" ID="ID_296766209" CREATED="1608116537929" MODIFIED="1608116567036"/>
+<node TEXT="git commit -m &quot;版本说明&quot;" ID="ID_134281404" CREATED="1608116377429" MODIFIED="1608125461206"/>
+</node>
+<node TEXT="查看文件改动内容" ID="ID_806137686" CREATED="1608123663599" MODIFIED="1608123691977">
+<node TEXT="git diff 文件名" ID="ID_826797076" CREATED="1608123692016" MODIFIED="1608123699509"/>
+</node>
+<node TEXT="丢弃修改内容" ID="ID_1363387442" CREATED="1608124164045" MODIFIED="1608124172529">
+<node TEXT="git checkout -- 文件名  //丢弃未加入暂存区的工作区修改" ID="ID_603127753" CREATED="1608124172556" MODIFIED="1608124373709"/>
+<node TEXT="git reset HEAD file  //丢弃加入工作区的修改,再使用上面的命令可丢弃工作区的修改" ID="ID_728697031" CREATED="1608124314887" MODIFIED="1608124447170"/>
 </node>
 <node TEXT="更新本地仓库" ID="ID_583862956" CREATED="1608116803964" MODIFIED="1608116821467">
 <node TEXT="git pull" ID="ID_664250209" CREATED="1608116821482" MODIFIED="1608116826996"/>
@@ -95,11 +134,15 @@
 <node TEXT="删除仓库中的文件" ID="ID_1450342218" CREATED="1608116654076" MODIFIED="1608116664256">
 <node TEXT="git rm 文件" ID="ID_1297174819" CREATED="1608116664272" MODIFIED="1608116670672"/>
 </node>
+<node TEXT="恢复误删的文件" ID="ID_1886348148" CREATED="1608124488718" MODIFIED="1608124498579">
+<node TEXT="git checkout -- 文件名  //仅针对不是用git rm 名令删除的文件有效" ID="ID_896552707" CREATED="1608124498610" MODIFIED="1608124585530"/>
+<node TEXT="如果是用git rm命令删除的文件可使用git reset --hard commit_id 回到未删除该文件的版本,但需先对当前修改做备份,也可恢复文件后将恢复的文件备份,再回到当前版本,并将被恢复的文件重新加入仓库" ID="ID_814037132" CREATED="1608124586216" MODIFIED="1608124764756"/>
+</node>
 <node TEXT="查看仓库状态" ID="ID_1279134614" CREATED="1608116681794" MODIFIED="1608116695848">
 <node TEXT="git status" ID="ID_23711313" CREATED="1608116695863" MODIFIED="1608116702364"/>
 </node>
 <node TEXT="查看版本日志" ID="ID_1527533796" CREATED="1608116703313" MODIFIED="1608116841085">
-<node TEXT="git log  //详细" ID="ID_1565909572" CREATED="1608116841085" MODIFIED="1608116856740"/>
+<node TEXT="git log  //详细的提交日志" ID="ID_1565909572" CREATED="1608116841085" MODIFIED="1608123965650"/>
 <node TEXT="git log --pretty=oneline  //简洁" ID="ID_1975008014" CREATED="1608116857144" MODIFIED="1608116876507"/>
 <node TEXT="git log --oneline  //极简" ID="ID_490019448" CREATED="1608116877143" MODIFIED="1608116889578"/>
 <node TEXT="git reflog  //本地操作日志,版本信息" ID="ID_1423930206" CREATED="1608116890146" MODIFIED="1608117053441"/>
@@ -107,17 +150,18 @@
 <node TEXT="HEAD指针,版本切换" ID="ID_658456820" CREATED="1608116929954" MODIFIED="1608116953318">
 <node TEXT="git reflog  //查看所有版本" ID="ID_91616432" CREATED="1608117005909" MODIFIED="1608117035210"/>
 <node TEXT="head@{0}为当前版本状态" ID="ID_594850784" CREATED="1608116978793" MODIFIED="1608116994110"/>
-<node TEXT="git reset --hard 301c0  //切换到301c0所代表的版本状态" ID="ID_1491672882" CREATED="1608116995550" MODIFIED="1608117145101"/>
+<node TEXT="git reset --hard commit_id  //切换到commit_id所代表的版本状态,HEAD表示当前版本,HEAD^为上一个版本,HEAD^^为上上个版本,HEAD~n为前n个版本" ID="ID_1491672882" CREATED="1608116995550" MODIFIED="1608123938684"/>
+<node TEXT="git diff HEAD -- 文件名  查看工作区和版本库中最新版本的区别" ID="ID_250456139" CREATED="1608124017729" MODIFIED="1608124094980"/>
 </node>
 <node TEXT="分支" ID="ID_904885487" CREATED="1608117171668" MODIFIED="1608117175346">
 <node TEXT="查看分支" ID="ID_1966848754" CREATED="1608117175346" MODIFIED="1608117182218">
 <node TEXT="git branch" ID="ID_1252159429" CREATED="1608117182218" MODIFIED="1608117187124"/>
 </node>
 <node TEXT="创建分支" ID="ID_1989607571" CREATED="1608117188666" MODIFIED="1608117194027">
-<node TEXT="git branch hotfix" ID="ID_469604480" CREATED="1608117194043" MODIFIED="1608117201516"/>
+<node TEXT="git branch hotfix  //创建hotfix分支" ID="ID_469604480" CREATED="1608117194043" MODIFIED="1608124144083"/>
 </node>
 <node TEXT="切换分支" ID="ID_1485804980" CREATED="1608117202636" MODIFIED="1608117215235">
-<node TEXT="git checkout hotfix" ID="ID_1054285802" CREATED="1608117215235" MODIFIED="1608117223826"/>
+<node TEXT="git checkout hotfix  //且换到hotfix分支" ID="ID_1054285802" CREATED="1608117215235" MODIFIED="1608124132522"/>
 </node>
 <node TEXT="合并分支" ID="ID_1617630460" CREATED="1608117226465" MODIFIED="1608117233816">
 <node TEXT="git merge hotfix  //需切换到master分支下" ID="ID_1842629538" CREATED="1608117233832" MODIFIED="1608117255679"/>
@@ -125,7 +169,7 @@
 <node TEXT="解决分支冲突" ID="ID_27059067" CREATED="1608117257607" MODIFIED="1608117264152">
 <node TEXT="手动修改冲突文件中的冲突内容" ID="ID_975560653" CREATED="1608117264168" MODIFIED="1608117287845"/>
 <node TEXT="git add ." ID="ID_1216959082" CREATED="1608117288032" MODIFIED="1608117291388"/>
-<node TEXT="git commit -m &quot;提示信息&quot;" ID="ID_1966517306" CREATED="1608117291568" MODIFIED="1608117311886"/>
+<node TEXT="git commit -m &quot;版本说明&quot;  //将解决冲突后的状态提交仓库" ID="ID_1966517306" CREATED="1608117291568" MODIFIED="1608125533483"/>
 </node>
 <node TEXT="常用分支名称" ID="ID_363719313" CREATED="1608117329930" MODIFIED="1608117336010">
 <node TEXT="master  主分支,是代码的核心" ID="ID_1132240780" CREATED="1608117336022" MODIFIED="1608117353892"/>
