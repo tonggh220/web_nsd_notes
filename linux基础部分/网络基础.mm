@@ -65,8 +65,8 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="4" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="基础概念" POSITION="left" ID="ID_871731792" CREATED="1603939228659" MODIFIED="1607593189180" COLOR="#660033" STYLE="bubble">
+<hook NAME="AutomaticEdgeColor" COUNTER="7" RULE="ON_BRANCH_CREATION"/>
+<node TEXT="基础概念" POSITION="right" ID="ID_871731792" CREATED="1603939228659" MODIFIED="1607593189180" COLOR="#660033" STYLE="bubble">
 <font NAME="微软雅黑" SIZE="20"/>
 <edge STYLE="horizontal" COLOR="#111111"/>
 <node TEXT="网络类型" ID="ID_366763399" CREATED="1603962569989" MODIFIED="1607593189225" COLOR="#000066" STYLE="bubble">
@@ -204,9 +204,9 @@
 <edge STYLE="horizontal" COLOR="#111111"/>
 </node>
 </node>
-<node TEXT="基础网络协议" POSITION="left" ID="ID_300499256" CREATED="1603948547122" MODIFIED="1607593189277" COLOR="#660033" STYLE="bubble">
+<node TEXT="基础网络协议" POSITION="right" ID="ID_300499256" CREATED="1603948547122" MODIFIED="1608554625720" COLOR="#660033" STYLE="bubble">
 <font NAME="微软雅黑" SIZE="20"/>
-<edge STYLE="horizontal"/>
+<edge STYLE="horizontal" COLOR="#00ffff"/>
 <node ID="ID_501654940" CREATED="1603948566460" MODIFIED="1607593189302" COLOR="#000000" STYLE="bubble"><richcontent TYPE="NODE">
 
 <html>
@@ -258,9 +258,9 @@
 </node>
 </node>
 </node>
-<node TEXT="服务器" POSITION="left" ID="ID_111349311" CREATED="1604043106351" MODIFIED="1607593189305" COLOR="#660033" STYLE="bubble">
+<node TEXT="服务器" POSITION="right" ID="ID_111349311" CREATED="1604043106351" MODIFIED="1608554628079" COLOR="#660033" STYLE="bubble">
 <font NAME="微软雅黑" SIZE="20"/>
-<edge STYLE="horizontal"/>
+<edge STYLE="horizontal" COLOR="#7c0000"/>
 <node TEXT="IDC置于机房" ID="ID_340107828" CREATED="1604043120585" MODIFIED="1607593189331" COLOR="#000000" STYLE="bubble">
 <font NAME="微软雅黑" SIZE="12"/>
 <edge STYLE="horizontal"/>
@@ -296,6 +296,15 @@
 <edge STYLE="horizontal"/>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="无类IP" POSITION="right" ID="ID_1912527767" CREATED="1608554643597" MODIFIED="1608554651733">
+<edge COLOR="#00007c"/>
+<node TEXT="特点" ID="ID_1348199937" CREATED="1608554651748" MODIFIED="1608554660988">
+<node TEXT="将一个网段继续划分为若干个网段,划分开来的子网段之间不能直接互相通信,掩码按划分情况设置,不再属于基本IP类型" ID="ID_1325086667" CREATED="1608554661004" MODIFIED="1608554805416"/>
+</node>
+<node TEXT="公式" ID="ID_374981227" CREATED="1608554685247" MODIFIED="1608554690060">
+<node TEXT="2^n=网段数量  //以二进制形式划分" ID="ID_1412568516" CREATED="1608554690082" MODIFIED="1608554725472"/>
 </node>
 </node>
 </node>

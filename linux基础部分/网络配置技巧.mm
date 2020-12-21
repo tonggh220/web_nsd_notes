@@ -3,7 +3,7 @@
 <node TEXT="网络配置技巧" FOLDED="false" ID="ID_624660960" CREATED="1603949035194" MODIFIED="1608457624590" LINK="网络基础.mm" COLOR="#660033" STYLE="bubble">
 <font NAME="微软雅黑" SIZE="20"/>
 <edge STYLE="horizontal" COLOR="#990000" WIDTH="thin" DASH="SOLID"/>
-<hook NAME="MapStyle" zoom="1.213">
+<hook NAME="MapStyle" zoom="0.912">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="3" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="4" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="配置项" POSITION="right" ID="ID_652129585" CREATED="1604109558076" MODIFIED="1607593189441" COLOR="#000066" STYLE="bubble">
 <font NAME="微软雅黑" SIZE="18"/>
 <edge STYLE="horizontal"/>
@@ -423,6 +423,108 @@
 <node TEXT="接口号从0/0开始" ID="ID_486020442" CREATED="1604121989817" MODIFIED="1607593189709" COLOR="#000000" STYLE="bubble">
 <font NAME="微软雅黑" SIZE="12"/>
 <edge STYLE="horizontal"/>
+</node>
+</node>
+</node>
+<node TEXT="VPN配置" POSITION="right" ID="ID_973940350" CREATED="1608554838841" MODIFIED="1608554850439">
+<edge COLOR="#ff00ff"/>
+<node TEXT="GRE VPN" ID="ID_1220513977" CREATED="1608554850454" MODIFIED="1608554860980">
+<node TEXT="特点" ID="ID_1675540023" CREATED="1608554860995" MODIFIED="1608554866240">
+<node TEXT="集成在linux内核模块中,配置简单" ID="ID_1014231469" CREATED="1608554866240" MODIFIED="1608554898874"/>
+</node>
+<node TEXT="配置" ID="ID_1002159839" CREATED="1608554916638" MODIFIED="1608554919475">
+<node TEXT="启用GRE模块" ID="ID_1687231088" CREATED="1608554919491" MODIFIED="1608554937335">
+<node TEXT="modprobe ip_gre" ID="ID_1517209822" CREATED="1608554937357" MODIFIED="1608554975635"/>
+<node TEXT="modinfo ip_gre  //查看模块信息" ID="ID_1910008226" CREATED="1608554986275" MODIFIED="1608555001821"/>
+</node>
+<node TEXT="创建隧道" ID="ID_392401846" CREATED="1608555009330" MODIFIED="1608555035520">
+<node TEXT="ip tunnel add tun0 mode gre remote 201.1.2.5 local 201.1.2.10  //local前为对方IP,后为本机IP" ID="ID_1040921834" CREATED="1608555035520" MODIFIED="1608555134931"/>
+<node TEXT="ip tunnel help  //查看帮助" ID="ID_969879959" CREATED="1608555135563" MODIFIED="1608555147985"/>
+</node>
+<node TEXT="启用隧道" ID="ID_448353246" CREATED="1608555150197" MODIFIED="1608555155727">
+<node TEXT="ip link show  //查看网络连接信息" ID="ID_1003829032" CREATED="1608555155743" MODIFIED="1608555184769"/>
+<node TEXT="ip link set tun0 up  //启用隧道" ID="ID_1420482179" CREATED="1608555185069" MODIFIED="1608555202397"/>
+</node>
+<node TEXT="为vpn配置隧道地址" ID="ID_395565825" CREATED="1608555213076" MODIFIED="1608555222433">
+<node TEXT="ip addr add 10.10.10.10/24 peer 10.10.10.5/24 dev tun0  //peer前为本机地址,后为对方地址,IP地址可以自定义私有IP" ID="ID_6474152" CREATED="1608555222448" MODIFIED="1608555315535"/>
+</node>
+<node TEXT="客户机做以上相同步骤" ID="ID_1941803641" CREATED="1608555349336" MODIFIED="1608555382595"/>
+</node>
+</node>
+<node TEXT="PPTP VPN" ID="ID_1199233651" CREATED="1608555396560" MODIFIED="1608555401939">
+<node TEXT="特点" ID="ID_1870598626" CREATED="1608555401955" MODIFIED="1608555419352">
+<node TEXT="由pptpd包提供,跨平台,windows自带,支持身份验证" ID="ID_1368251166" CREATED="1608555419616" MODIFIED="1608555476534"/>
+</node>
+<node TEXT="配置" ID="ID_98817457" CREATED="1608555456046" MODIFIED="1608555464886">
+<node TEXT="安装部署" ID="ID_956425064" CREATED="1608555478823" MODIFIED="1608555573800">
+<node TEXT="pptpd , ppp" ID="ID_291647893" CREATED="1608555564629" MODIFIED="1608555603677"/>
+</node>
+<node TEXT="/etc/pptpd.conf" ID="ID_703161068" CREATED="1608555614577" MODIFIED="1608555652497">
+<node TEXT="...&#xa;localip 201.1.2.5  //服务器本地IP&#xa;remoteip 192.168.3.1-50  //分配给客户端的IP池&#xa;..." ID="ID_358465088" CREATED="1608555652515" MODIFIED="1608555920092"/>
+</node>
+<node TEXT="/etc/ppp/options.pptpd" ID="ID_353461296" CREATED="1608555712582" MODIFIED="1608555729740">
+<node TEXT="require-mppe-128  //使用MPPE加密数据&#xa;ms-dns 8.8.8.8  //DNS服务器根据情况而定" ID="ID_1762543745" CREATED="1608555729771" MODIFIED="1608555892127"/>
+</node>
+<node TEXT="/etc/ppp/chap-secrets" ID="ID_742339047" CREATED="1608555762183" MODIFIED="1608555775254">
+<node TEXT="jacob * 123456 *  //设置账户,第一个*表示任意服务器IP,第二个*表示任意客户端IP" ID="ID_1507651432" CREATED="1608555775269" MODIFIED="1608555859422"/>
+</node>
+<node TEXT="启动服务" ID="ID_690228265" CREATED="1608555931697" MODIFIED="1608555935275">
+<node TEXT="systemctl start pptpd" ID="ID_918599737" CREATED="1608555935290" MODIFIED="1608555947104"/>
+<node TEXT="systemctl enable pptpd" ID="ID_797740504" CREATED="1608555948508" MODIFIED="1608555959419"/>
+</node>
+<node TEXT="翻墙设置" ID="ID_1378676017" CREATED="1608555966236" MODIFIED="1608555974587">
+<node TEXT="echo &quot;1&quot; &gt; /proc/sys/net/ipv4/ip_forward  //开启路由转发" ID="ID_1935484437" CREATED="1608555974603" MODIFIED="1608556004950"/>
+<node TEXT="iptables -t nat -A POSTROUTING -s 192.168.3.0/24 -j SNAT --to-source 201.1.2.5  //防火墙放行" ID="ID_778544942" CREATED="1608556010153" MODIFIED="1608556086898"/>
+</node>
+</node>
+</node>
+<node TEXT="L2TP+IPSec VPN" ID="ID_962889291" CREATED="1608556978125" MODIFIED="1608557005525">
+<node TEXT="高安全性,支持身份验证,跨平台" ID="ID_242659941" CREATED="1608557005541" MODIFIED="1608557068046"/>
+<node TEXT="安装部署" ID="ID_972462981" CREATED="1608557068949" MODIFIED="1608557072574">
+<node TEXT="libreswan" ID="ID_346459127" CREATED="1608557072589" MODIFIED="1608557232299"/>
+<node TEXT="/etc/ipsec.conf  //默认配置即可" ID="ID_1774216373" CREATED="1608557235408" MODIFIED="1608557279517"/>
+</node>
+<node TEXT="加载配置文件" ID="ID_731936921" CREATED="1608557286649" MODIFIED="1608557300753">
+<node TEXT="include /etc/ipsec.d/*.conf" ID="ID_9482500" CREATED="1608557300768" MODIFIED="1608557323123"/>
+</node>
+<node TEXT="/etc/ipse.d/myipsec.conf" ID="ID_1644614853" CREATED="1608557327234" MODIFIED="1608557345987">
+<node TEXT="conn IDC-PSK-NAT&#xa;    rightsubnet=vhost:%priv&#xa;    also=IDC-PSK-noNAT&#xa;conn IDC-PSK-noNAT&#xa;    authby=secret       //加密认证&#xa;        ike=3des-sha1;modp1024       //加密算法&#xa;        phase2alg=aes256-sha1;modp2048    //加密算法&#xa;    pfs=no&#xa;    auto=add&#xa;    keyingtries=3&#xa;    rekey=no&#xa;    ikelifetime=8h&#xa;    keylife=3h&#xa;    type=transport&#xa;    left=201.1.2.10     //重要，服务器本机的外网IP&#xa;    leftprotoport=17/1701&#xa;    right=%any      //允许任何客户端连接&#xa;    rightprotoport=17/%any" ID="ID_51964153" CREATED="1608557346003" MODIFIED="1608557411911"/>
+</node>
+<node TEXT="/etc/ipsec.secrets" ID="ID_1266142600" CREATED="1608557429624" MODIFIED="1608557449118">
+<node TEXT="include /etc/ipsec.d/*.secrets&#xa;201.1.2.10   %any:    PSK    &quot;randpass&quot;     //randpass为预共享密钥&#xa;//201.1.2.10是VPN服务器的IP&#xa;//%any:任何客户端都可以连接服务器&#xa;//PSK（pre share key）中文预共享密钥" ID="ID_1307769893" CREATED="1608557449140" MODIFIED="1608557477323"/>
+</node>
+<node TEXT="启动IPSec" ID="ID_636794495" CREATED="1608557484517" MODIFIED="1608557496169">
+<node TEXT="systemctl start ipsec" ID="ID_517552533" CREATED="1608557496200" MODIFIED="1608557511970"/>
+<node TEXT="查看服务状态" ID="ID_1735331054" CREATED="1608557512293" MODIFIED="1608557519827">
+<node TEXT="netstat -ntulp | grep 500" ID="ID_1348521037" CREATED="1608557519843" MODIFIED="1608557537048"/>
+</node>
+</node>
+<node TEXT="部署XL2TP" ID="ID_1271120406" CREATED="1608557545870" MODIFIED="1608557554147">
+<node TEXT="安装xl2tpd" ID="ID_1105297655" CREATED="1608557560726" MODIFIED="1608557575051"/>
+<node TEXT="/etc/xl2tpd/xl2tpd.conf" ID="ID_1697242075" CREATED="1608557578612" MODIFIED="1608557599605">
+<node TEXT="[global]&#xa;.. ..&#xa;[lns default]&#xa;.. ..&#xa;ip range = 192.168.3.128-192.168.3.254     //分配给客户端的IP池&#xa;local ip = 201.1.2.10  //VPN服务器IP地址" ID="ID_8167190" CREATED="1608557600523" MODIFIED="1608557651266"/>
+</node>
+<node TEXT="/etc/ppp/options.xl2tpd" ID="ID_859769232" CREATED="1608557660834" MODIFIED="1608557672046">
+<node TEXT="require-mschap-v2                                         //添加一行，强制要求认证&#xa;#crtscts                                                //注释或删除该行&#xa;#lock                                                //注释或删除该行" ID="ID_701897276" CREATED="1608557672062" MODIFIED="1608557694368"/>
+</node>
+<node TEXT="/etc/ppp/chap-secrets" ID="ID_433490498" CREATED="1608557700412" MODIFIED="1608557712928">
+<node TEXT="jacob   *       123456  *      //账户名称   服务器名称   密码   客户端IP" ID="ID_144349836" CREATED="1608557712944" MODIFIED="1608557730670"/>
+</node>
+<node TEXT="启动服务" ID="ID_1447082482" CREATED="1608557739190" MODIFIED="1608557744049">
+<node TEXT="systemctl start xl2tpd" ID="ID_1187166612" CREATED="1608557744064" MODIFIED="1608557760204"/>
+<node TEXT="ss -ntulp | grep xl2tpd  //查看服务状态" ID="ID_839869927" CREATED="1608557760558" MODIFIED="1608557780923"/>
+</node>
+<node TEXT="翻墙设置" ID="ID_1840109427" CREATED="1608557784732" MODIFIED="1608557791419">
+<node TEXT="echo &quot;1&quot; &gt; /proc/sys/net/ipv4/ip_forward  //开启路由转发" ID="ID_557588728" CREATED="1608557791450" MODIFIED="1608557823082"/>
+<node TEXT="iptables -t nat -A POSTROUTING -s 192.168.3.0/24 -j SNAT --to-source 201.1.2.10  //防火墙配置" ID="ID_1099272953" CREATED="1608557823313" MODIFIED="1608557874342"/>
+</node>
+<node TEXT="windows客户端配置" ID="ID_1352548838" CREATED="1608557900279" MODIFIED="1608557909665">
+<node TEXT="修改注册表" ID="ID_924973373" CREATED="1608557909686" MODIFIED="1608557934080">
+<node TEXT="HKEY_LOCAL_MACHINE\ System\CurrentControlSet\Services\Rasman\Parameters" ID="ID_1729420162" CREATED="1608557934096" MODIFIED="1608557946079"/>
+<node TEXT="新建DWORD,名称设为ProhibitlpSec,值为1" ID="ID_283436845" CREATED="1608557946674" MODIFIED="1608558004699"/>
+</node>
+<node TEXT="重启" ID="ID_945327865" CREATED="1608558006551" MODIFIED="1608558010045"/>
+</node>
 </node>
 </node>
 </node>
